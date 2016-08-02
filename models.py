@@ -10,7 +10,7 @@ class account_invoice(models.Model):
 
 	@api.model
 	def _update_customer_tags(self):
-		invoices = self.search()
+		invoices = self.search([])
 		for invoice in invoices:
 			if invoice.partner_id.category_id:
 				categ = []
