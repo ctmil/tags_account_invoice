@@ -13,8 +13,11 @@ class account_invoice(models.Model):
 		invoices = self.search([('customer_tags','=',False)])
 		for invoice in invoices:
 			if invoice.partner_id.category_id:
+				categ = []
+				for category in invoice.partner_id.category_id:
+					categ.append(category.id)
 				vals = {
-					'customer_tags': invoice.partner_id.category_id
+					'customer_tags': [(6,0,categ)]
 					}
 				invoice.write(vals)
 		return None
