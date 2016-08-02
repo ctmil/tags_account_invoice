@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="account_invoice_form_tags">
+            <field name="name">account.invoice.form.tags</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+		<field name="tax_line" position="before">
+			<field name="customer_tags" />	
+		</field>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
