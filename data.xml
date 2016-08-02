@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="update_tag_invoice_method" model="ir.cron">
+                <field name="name">Actualizacion de facturas/NC</field>
+                <field name="active">True</field>
+                <field name="priority">5</field>
+                <field name="interval_number">10</field>
+                <field name="interval_type">minutes</field>
+                <field name="numbercall">-1</field>
+                <field name="model">account.invoice</field>
+                <field name="function">_update_customer_tags</field>
+                <field name="args">()</field>
+        </record>
+
+    </data>
+</openerp>
+
