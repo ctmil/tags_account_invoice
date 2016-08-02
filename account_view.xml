@@ -8,7 +8,9 @@
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
 		<field name="tax_line" position="before">
-			<field name="customer_tags" readonly="1" widget="many2many_tags" />	
+			<group string="Categoria de clientes">
+				<field name="customer_tags" readonly="1" widget="many2many_tags" />	
+			</group>
 		</field>
             </field>
         </record>
