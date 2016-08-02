@@ -5,6 +5,7 @@
     'depends': ['base','account'],
     'data': [
 	'account_view.xml',
+	'data.xml'
     ],
     'demo': [
     ],
