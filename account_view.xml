@@ -15,6 +15,17 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="account_invoice_search_tags">
+            <field name="name">account.invoice.search.tags</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+		<field name="user_id" position="after">
+			<field name="customer_tags" />	
+		</field>
+            </field>
+        </record>
+
 
     </data>
 </openerp>
